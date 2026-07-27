@@ -45,11 +45,13 @@ sudo systemctl restart klipper
 
 ## Использование
 
-В консоли Klipper / Mainsail / Fluidd:
+В консоли:
 
 ```
 AUTO_DIAGNOSTIC
 ```
+
+Или макрос `START_AUTO_DIAGNOSTIC` — он появляется как кнопка в Mainsail / Fluidd.
 
 ## Требования
 
