@@ -1,7 +1,5 @@
 # Auto Diagnostic System for Klipper
 #
-# Copyright (C) 2025 Vlad Trigorlov <427departament@gmail.com>
-#
 # This file may be distributed under the terms of the GNU GPLv3 license.
 
 import logging
@@ -22,9 +20,9 @@ class AutoDiagnostic:
             'chamber': config.getfloat('chamber_temp', 0.0, minval=0),
         }
         self.park = {
-            'x': config.getfloat('park_x', 100.0),
-            'y': config.getfloat('park_y', 100.0),
-            'z': config.getfloat('park_z', 10.0),
+            'x': config.getfloat('park_x', 150.0),
+            'y': config.getfloat('park_y', 150.0),
+            'z': config.getfloat('park_z', 100.0),
         }
         self.fan_check_drop = config.getfloat('fan_temp_drop', 2.0, minval=0.5)
         self.fan_check_time = config.getfloat('fan_check_time', 15.0, minval=1.0)

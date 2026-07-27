@@ -16,16 +16,16 @@
 Одной командой (ветка `v2`):
 
 ```bash
-git clone -b v2 https://github.com/Transistor427/ADS.git ~/ADS && ln -sf ~/ADS/auto_diagnostic_system.py ~/klipper/klippy/extras/auto_diagnostic_system.py && ln -sf ~/ADS/auto_diagnostic_system.cfg ~/printer_data/config/auto_diagnostic_system.cfg
+git clone -b v2 https://github.com/Transistor427/ADS.git ~/ADS && ln -sf ~/ADS/auto_diagnostic_system.py ~/klipper/klippy/extras/auto_diagnostic_system.py && mkdir -p ~/printer_data/config/klipper-config && cp ~/ADS/auto_diagnostic_system.cfg ~/printer_data/config/klipper-config/
 ```
 
 Добавьте в `printer.cfg`:
 
 ```ini
-[include auto_diagnostic_system.cfg]
+[include klipper-config/auto_diagnostic_system.cfg]
 ```
 
-Подставьте свои температуры и координаты в `auto_diagnostic_system.cfg`, затем перезапустите Klipper:
+Подставьте свои температуры и координаты в `~/printer_data/config/klipper-config/auto_diagnostic_system.cfg`, затем перезапустите Klipper:
 
 ```bash
 sudo systemctl restart klipper
